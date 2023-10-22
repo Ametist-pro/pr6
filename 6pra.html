@@ -1,0 +1,59 @@
+<script>
+
+class Chel {
+  constructor(name, surName, year) {
+    this.name = name;
+    this.surName = surName;
+    this.year = year;
+  }
+
+  printChel() {
+    document.writeln(`Имя: ${this.name}<br>`);
+    document.writeln(`Фамилия: ${this.surName}<br>`);
+    document.writeln(`Год рождения: ${this.year}<br>`);
+  }
+}
+
+class Car {
+  constructor(make, yearReleased, engineSize) {
+    this.make = make;
+    this.yearReleased = yearReleased;
+    this.engineSize = engineSize;
+  }
+
+  printCar() {
+    document.writeln(`Марка авто: ${this.make}<br>`);
+    document.writeln(`Год выпуска: ${this.yearReleased}<br>`);
+    document.writeln(`Объём двигателя: ${this.engineSize}<br>`);
+  }
+}
+
+class Book {
+  constructor(title, author, yearPublished) {
+    this.title = title;
+    this.author = author;
+    this.yearPublished = yearPublished;
+}
+
+printBook() {
+document.writeln(`Название: ${this.title}<br>`);
+document.writeln(`Автор: ${this.author}<br>`);
+document.writeln(`Год публикации: ${this.yearPublished}<br>`);
+}
+}
+
+function printInfo(chel, book, car) {
+chel.printChel();
+books.printBook();
+auto.printCar();
+
+document.writeln(`${chel.name} читает книгу "${books.title}" об автомобиле "${auto.make}".`);
+}
+
+var chel = new Chel("Иван", "Иванов", 1999);
+var auto = new Car("Tesla", 2012, 0);
+var books = new Book("Илон Маск: Tesla, SpaceX и дорога в будущее", "Эшли Вэнс", 2015);
+
+printInfo(chel, auto, books);
+
+</script>
